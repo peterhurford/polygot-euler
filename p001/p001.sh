@@ -5,9 +5,19 @@
 
 ### Find the sum of all the multiples of 3 or 5 below 1000.
 
-function sum_all_multiples_of_3_or_5_below_n () {
-  local total = 0
-  local n = $1
+sum_all_multiples_of_3_or_5_below_n() {
+  local total=0
+  local n=$[$1 - 1]
+  while [ $n -ge 0 ]
+  do
+    if [ $[$n % 3] -eq 0 ] || [ $[$n % 5] -eq 0 ]; then
+      total=$[$total + $n]
+    fi
+    n=$[$n - 1]
+  done
+  echo $total
 }
 
-#TODO:
+sum_all_multiples_of_3_or_5_below_n 10    # 23
+
+sum_all_multiples_of_3_or_5_below_n 1000  # 233168
