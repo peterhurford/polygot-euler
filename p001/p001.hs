@@ -3,10 +3,12 @@
 
 -- Find the sum of all the multiples of 3 or 5 below 1000.
 
-let multiple_3_or_5 x = (mod x 3) == 0 || (mod x 5) == 0
-let sum_all_multiples_of_3_or_5_below_n n = sum (filter multiple_3_or_5 (init [0..n]))
+multiple3or5 :: Int -> Bool
+multiple3or5 x = (mod x 3) == 0 || (mod x 5) == 0
 
-sum_all_multiples_of_3_or_5_below_n 10    -- 23
+sumAllMultiplesOf3Or5BelowN :: Int -> Int
+sumAllMultiplesOf3Or5BelowN n = sum (filter multiple_3_or_5 (init [0..n]))
 
-sum_all_multiples_of_3_or_5_below_n 1000  -- 233168
+sumAllMultiplesOf3Or5BelowN 10    -- 23
 
+sumAllMultiplesOf3Or5BelowN 1000  -- 233168
