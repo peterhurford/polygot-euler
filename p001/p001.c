@@ -7,10 +7,9 @@
 
 int sum_all_multiples_of_3_or_5_below_n(int n) {
   int total = 0;
-  n--;
   while (n >= 0) {
-    if (n % 3 == 0 || n % 5 == 0) { total += n; }
     n--;
+    if (n % 3 == 0 || n % 5 == 0) { total += n; }
   }
   return(total);
 }
