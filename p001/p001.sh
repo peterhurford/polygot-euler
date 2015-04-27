@@ -7,13 +7,13 @@
 
 sum_all_multiples_of_3_or_5_below_n() {
   local total=0
-  local n=$[$1 - 1]
+  local n=$1
   while [ $n -ge 0 ]
   do
+    n=$[$n - 1]
     if [ $[$n % 3] -eq 0 ] || [ $[$n % 5] -eq 0 ]; then
       total=$[$total + $n]
     fi
-    n=$[$n - 1]
   done
   echo $total
 }
