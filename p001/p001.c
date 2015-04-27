@@ -5,8 +5,6 @@
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
-int sum_all_multiples_of_3_or_5_below_n(int n);
-
 int sum_all_multiples_of_3_or_5_below_n(int n) {
   int total = 0;
   n--;
