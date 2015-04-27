@@ -25,3 +25,6 @@ sum_all_multiples_of_3_or_5_below_n(1000)  # 233168
 
 ##### Second attempt -- less code but less readable
 sum(seq(999)[unlist(lapply(lapply(lapply(seq(999), `%%`, c(3, 5)), `==`, 0), any))])
+
+##### Third attempt, using Filter
+sum(Filter(function(x) { x %% 3 == 0 || x %% 5 == 0 }, seq(999)))
