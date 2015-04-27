@@ -13,6 +13,6 @@ multiples_of_3_or_5 = (n) -> i for i in [1..n] when mult_3_or_5(i)
 
 sum_all_multiples_of_3_or_5_below_n = (n) -> sum(multiples_of_3_or_5(below(n)))
 
-alert(sum_all_multiples_of_3_or_5_below_n(10))    # 23
+console.log(sum_all_multiples_of_3_or_5_below_n(10))    # 23
 
-alert(sum_all_multiples_of_3_or_5_below_n(1000))  # 233168
+console.log(sum_all_multiples_of_3_or_5_below_n(1000))  # 233168
