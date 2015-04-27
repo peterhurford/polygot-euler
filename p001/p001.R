@@ -21,3 +21,7 @@ sum_all_multiples_of_3_or_5_below_n <- function(n) {
 sum_all_multiples_of_3_or_5_below_n(10)    # 23
 
 sum_all_multiples_of_3_or_5_below_n(1000)  # 233168
+
+
+##### Second attempt -- less code but less readable
+sum(seq(999)[unlist(lapply(lapply(lapply(seq(999), `%%`, c(3, 5)), `%in%`, 0), any))])
