@@ -3,5 +3,8 @@
 
 ### Find the sum of all the multiples of 3 or 5 below 1000.
 
-(!1e3)
-#TODO: Finish
+fn: {+/&|/~(!x)!/: 3 5}
+
+fn 10    # 23
+
+fn 1000  # 233168
