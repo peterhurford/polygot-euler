@@ -10,7 +10,7 @@ def multiple3or5(n: Int): Boolean = {
 }
 
 def sumAllMultiplesOf3Or5BelowN(n: Int): Int = {
-  List.range(1, n) filter multiple3or5 sum
+  (1 to n-1) filter multiple3or5 sum
 }
 
 sumAllMultiplesOf3Or5BelowN(10)    // 23
