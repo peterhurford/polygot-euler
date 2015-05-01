@@ -8,7 +8,7 @@ import "fmt"
 
 func sumAllMultiplesOf3or5BelowN(n int) int{
   total := 0
-  for x:= n-1; x >= 0; x-- {
+  for x := n-1; x >= 0; x-- {
     if (x % 3 == 0 || x % 5 == 0) {
       total += x
     }
