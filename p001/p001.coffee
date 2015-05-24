@@ -3,16 +3,9 @@
 
 ## Find the sum of all the multiples of 3 or 5 below 1000.
 
-mult_3_or_5 = (n) -> n % 3 == 0 or n % 5 == 0
+sum_all_multiples_of_3_or_5_below_n = (n) ->
+  (i for i in [1..n-1] when i % 3 == 0 or i % 5 == 0).reduce (a, b) -> a + b
 
-sum = (ll) -> total = 0; total += i for i in ll; total
+alert(sum_all_multiples_of_3_or_5_below_n(10))    # 23
 
-below = (x) -> x - 1
-
-multiples_of_3_or_5 = (n) -> i for i in [1..n] when mult_3_or_5(i)
-
-sum_all_multiples_of_3_or_5_below_n = (n) -> sum(multiples_of_3_or_5(below(n)))
-
-console.log(sum_all_multiples_of_3_or_5_below_n(10))    # 23
-
-console.log(sum_all_multiples_of_3_or_5_below_n(1000))  # 233168
+alert(sum_all_multiples_of_3_or_5_below_n(1000))  # 233168
