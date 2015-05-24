@@ -14,6 +14,6 @@ sum_all_multiples_of_3_or_5_below_n = function(n) {
   return(total);
 }
 
-console.log(sum_all_multiples_of_3_or_5_below_n(10))    // 23
+alert(sum_all_multiples_of_3_or_5_below_n(10))    // 23
 
-console.log(sum_all_multiples_of_3_or_5_below_n(1000))  // 233168
+alert(sum_all_multiples_of_3_or_5_below_n(1000))  // 233168
