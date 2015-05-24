@@ -16,7 +16,7 @@ lapply(seq(50), fib) %>% Filter(function(x) x < 4000000, .) %>%
   Filter(function(x) { round(x %% 2) == 0 }, .) %>% Reduce(sum, .)  # 4613732
 
 
-### Unbounded Version
+##### Unbounded Version
 l <- list(1, 1)
 while (Reduce(sum, tail(l, 2)) < 4000000) {
   l <- append(l, Reduce(sum, tail(l, 2)))
