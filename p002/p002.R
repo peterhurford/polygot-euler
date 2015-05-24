@@ -5,7 +5,6 @@
 ### By considering the terms in the Fibonacci sequence whose values do not
 ### exceed four million, find the sum of the even-valued terms.
 
-# Golden Ratio Implementation of Fibonacci
 library(magrittr)
 fib <- function(n) {
   l <- as.list(rep(1, n))
