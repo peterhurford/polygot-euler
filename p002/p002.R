@@ -5,14 +5,20 @@
 ### By considering the terms in the Fibonacci sequence whose values do not
 ### exceed four million, find the sum of the even-valued terms.
 
-library(magrittr)
+# Golden Ratio Implementation of Fibonacci
 fib <- function(n) {
-  l <- as.list(rep(1, n))
-  for (i in seq_along(l)) {
-    if (i > 2) { l[[i]] <- l[[i - 1]] + l[[i - 2]] }
-  }
-  l
+  n <- n + 1 # Add one because we're not starting with "1, 1, 2"
+  ((1 + sqrt(5))^n - (1 - sqrt(5))^n)/(2^n * sqrt(5))
 }
 
-fib(50) %>% Filter(function(x) x < 4000000, .) %>%
+library(magrittr)
+lapply(seq(50), fib) %>% Filter(function(x) x < 4000000, .) %>%
   Filter(function(x) { round(x %% 2) == 0 }, .) %>% Reduce(sum, .)  # 4613732
+
+
+### Unbounded Version
+l <- list(1, 1)
+while (Reduce(sum, tail(l, 2)) < 4000000) {
+  l <- append(l, Reduce(sum, tail(l, 2)))
+}
+Reduce(sum, Filter(function(x) round(x %% 2) == 0, l)) # 4613732
