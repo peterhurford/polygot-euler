@@ -5,6 +5,7 @@
 ### By considering the terms in the Fibonacci sequence whose values do not
 ### exceed four million, find the sum of the even-valued terms.
 
+##### With Golden Ratio
 import math
 
 def fib(n):
@@ -12,3 +13,24 @@ def fib(n):
 
 sum(filter(lambda x: x % 2 == 0, filter(lambda x: x < 4000000, map(fib, range(50)))))
 # 4613732
+
+
+##### Unbounded with Generator
+def fib():
+    a, b = 1, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+def even(seq):
+    for i in seq:
+        if not i % 2:
+            yield i
+
+def under(seq, limit):
+    for i in seq:
+        if i > limit:
+            break
+        yield i   
+
+sum(even(under(fib(), 4e6)))   # 4613732
