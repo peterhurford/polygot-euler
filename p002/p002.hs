@@ -5,5 +5,7 @@
 -- By considering the terms in the Fibonacci sequence whose values do not
 -- exceed four million, find the sum of the even-valued terms.
 
-(sum (filter even (takeWhile ( < 4000000) (0 : 1 : zipWith (+) fibs (tail fibs)))))
+sum [ x | x <- takeWhile (< 4000000) fibs, even x]
+  where
+    fibs = 1 : 1 : zipWith (+) fibs (tail fibs)
 -- 4613732
