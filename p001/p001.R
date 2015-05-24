@@ -11,6 +11,9 @@ sum_all_multiples_of_3_or_5_below_n(10)    # 23
 
 sum_all_multiples_of_3_or_5_below_n(1000)  # 233168
 
-##### No filter
+##### Union Approach
+sum(union(seq(3, 999, 3), seq(5, 999, 5)))
+
+##### Another no filter approach
 sum(seq(999)[unlist(lapply(lapply(lapply(seq(999), `%%`, c(3, 5)), `==`, 0), any))])
 
