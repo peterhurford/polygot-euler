@@ -12,7 +12,7 @@ fib <- function(n) {
 }
 
 library(magrittr)
-lapply(seq(50), fib) %>% Filter(function(x) x < 4000000, .) %>%
+lapply(seq(50), fib) %>% Filter(function(x) x <= 4000000, .) %>%
   Filter(function(x) { round(x %% 2) == 0 }, .) %>% Reduce(sum, .)  # 4613732
 
 
