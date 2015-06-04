@@ -11,7 +11,7 @@ var total = 0;
 var a = 1;
 var b = 1;
 var sum = 2;
-while (sum < 4e6) {
+while (sum <= 4e6) {
   sum = a + b;
   a = b;
   b = sum;
