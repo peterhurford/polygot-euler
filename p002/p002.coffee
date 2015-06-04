@@ -6,7 +6,7 @@
 ## exceed four million, find the sum of the even-valued terms.
 
 a = [1, 1]
-while (a[a.length - 2] + a[a.length - 1] < 4000000)
+while (a[a.length - 2] + a[a.length - 1] <= 4000000)
   a.push(a[a.length - 2] + a[a.length - 1])
 
 (i for i in a when i % 2 == 0).reduce (a, b) -> a + b
