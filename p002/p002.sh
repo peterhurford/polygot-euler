@@ -12,7 +12,7 @@ get_fib() {
   local a=1
   local b=1
   local sum=2
-  while [ $sum -lt 4000000 ]
+  while [ $sum -le 4000000 ]
   do
     sum=$[$a + $b]
     a=$b
