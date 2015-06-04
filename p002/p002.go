@@ -14,7 +14,7 @@ func main() {
 	a := 1
 	b := 1
 	sum := 2
-	for sum < 4e6 {
+	for sum <= 4e6 {
 		sum = a + b
 		a = b
 		b = sum
