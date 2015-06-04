@@ -6,6 +6,6 @@
 // exceed four million, find the sum of the even-valued terms.
 
 val fib: Stream[BigInt] = 0 #:: 1 #:: fib.zip(fib.tail).map(p => p._1 + p._2)
-fib takeWhile(_ < 4000000) filter {_%2 == 0} sum 
+fib takeWhile(_ <= 4000000) filter {_%2 == 0} sum 
 // res14: BigInt = 4613732
 
