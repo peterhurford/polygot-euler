@@ -12,7 +12,7 @@ int main() {
   int a = 1;
   int b = 1;
   int sum = 2;
-  while (sum < 4e6) {
+  while (sum <= 4e6) {
     sum = a + b;
     a = b;
     b = sum;
