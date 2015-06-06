@@ -5,9 +5,8 @@
 
 (defn multiplesOf3or5Below [n]
   (->> (range n)
-    (filter #(or
-        (= (mod % 5) 0)
-        (= (mod % 3) 0)))
+    (filter #(or (zero? (mod % 5))
+                 (zero? (mod % 3))))
     (reduce +)))
 
 (multiplesOf3or5Below 10)
