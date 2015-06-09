@@ -7,7 +7,7 @@
 
 (let [fibs (fn f [a b] (lazy-seq (cons a (f b (+ a b)))))]
   ( ->> (fibs 0 1)
-        (take-while #(< % 4000000))
+        (take-while #(<= % 4000000))
         (filter even?)
         (reduce +)))
 ; 4613732
