@@ -5,6 +5,9 @@
 ; By considering the terms in the Fibonacci sequence whose values do not
 ; exceed four million, find the sum of the even-valued terms.
 
-(reduce + (filter even? (take-while (partial > 4000000)
-  ((fn fib [a b] (lazy-seq (cons a (fib b (+ a b))))) 0 1))))
+(let [fibs (fn f [a b] (lazy-seq (cons a (f b (+ a b)))))]
+  ( ->> (fibs 0 1)
+        (take-while #(< % 4000000))
+        (filter even?)
+        (reduce +)))
 ; 4613732
