@@ -3,19 +3,17 @@
 
 import math
 
-def is_prime(n):
-  if n == 1 or n == 2:
-    return True
-  for i in range(2, n):
-    if n % i == 0:
-      return False
-  return True
-
-def roots(n):
-  return filter(lambda x: n % x == 0, range(2, int(math.sqrt(n))))
-
 def largest_prime_factor(n):
-  return max(filter(is_prime, filter(lambda x: n % x == 0, roots(n))))
+  if n <= 3:
+    return n
+  for j in [2, 3]:
+    if n % j == 0:
+      return largest_prime_factor(n / j)
+  for i in range(5, int(n ** 0.5), 6):
+    for j in [i, i + 2]:
+      if n % j == 0:
+        return largest_prime_factor(n / j)
+  return n
 
 print(largest_prime_factor(13195))           # 29
 print(largest_prime_factor(600851475143))    # 6857

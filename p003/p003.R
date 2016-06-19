@@ -3,11 +3,11 @@
 
 largest_prime_factor <- function(n) {
   if (n <= 3) { return(n) }
-  for (j in c(2, 3)) { if (n %% j == 0) { return(prime_factor(n / j)) }}
+  for (j in c(2, 3)) { if (n %% j == 0) { return(largest_prime_factor(n / j)) }}
   k <- floor(sqrt(n))
   if (k > 5) {
     for (i in seq(5, k, by = 6)) {
-      for (j in c(i, i + 2)) { if (n %% j == 0) { return(prime_factor(n / j)) }}
+      for (j in c(i, i + 2)) { if (n %% j == 0) { return(largest_prime_factor(n / j)) }}
     }
   }
   n
