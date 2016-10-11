@@ -8,8 +8,8 @@ Go through [Project Euler](https://projecteuler.net), attempt to solve each prob
 
 * **p002:** [K](p002/p002.K), [R](p002/p002.R), [C](p002/p002.c), [Coffeescript](p002/p002.coffee), [Go](p002/p002.go), [Haskell](p002/p002.hs), [JavaScript](p002/p002.js), [PHP](p002/p002.php), [Python](p002/p002.py), [Ruby](p002/p002.rb), [Scala](p002/p002.scala), [Shell](p002/p002.sh), [Clojure](p002/p002.clj), [Julia](p002/p002.jl), [Rust](p002/p002.rs).
 
-* **p003:** [K](p003/p003.k), [R](p003/p003.R), C, Coffeescript, JavaScript, [Haskell](p003/p003.hs), [Python](p003/p003.py), Ruby, Scala, Clojure, [Julia](p003/p003.jl), Rust.
+* **p003:** [K](p003/p003.k), [R](p003/p003.R), C, JavaScript, [Haskell](p003/p003.hs), [Python](p003/p003.py), Ruby, Scala, Clojure, [Julia](p003/p003.jl), Rust.
 
-* **p004:** K, R, C, Coffeescript, JavaScript, Haskell, Python, Ruby, Scala, Clojure, Julia, Rust.
+* **p004:** K, R, C, JavaScript, Haskell, Python, Ruby, Scala, Clojure, Rust.
 
-* **p005:** K, R, C, Coffeescript, JavaScript, Haskell, Python, Ruby, Scala, Clojure, Julia, Rust.
+* **p005:** K, R, C, JavaScript, Haskell, Python, Ruby, Scala, Clojure, Rust.
