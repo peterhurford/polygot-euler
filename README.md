@@ -1,6 +1,6 @@
 ## Polygot Euler
 
-Go through [Project Euler](https://projecteuler.net), attempt to solve each problem efficiently in different programming languages.  Some of these languages I work in professionally (e.g., Ruby, R), others I know a bit from past exeriences (e.g., Coffeescript, Python, C, JavaScript), and others I am learning for the very first time here (e.g., K, Julia, Rust, Haskell, Scala).
+Go through [Project Euler](https://projecteuler.net), attempt to solve each problem efficiently in different programming languages.  Some of these languages I work in professionally (e.g., Ruby, R, Python), others I know a bit from past exeriences (e.g., C, JavaScript), and others I am learning for the very first time here (e.g., K, Rust, Haskell, Scala, Clojure).
 
 ![](https://projecteuler.net/profile/peterhurford.png)
 
