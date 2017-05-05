@@ -14,5 +14,5 @@ fib = Enumerator.new do |list|
   end
 end
 
-fib.take_while { |x| x <= 4000000 }.reject{ |x| x.odd? }.inject(:+)
+fib.take_while { |x| x <= 4000000 }.reject{ |x| x.odd? }.reduce(:+)
 # 4613732
